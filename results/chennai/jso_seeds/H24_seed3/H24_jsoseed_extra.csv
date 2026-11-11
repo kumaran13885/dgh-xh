@@ -1,0 +1,2 @@
+H,split,model,MAE,RMSE,R2,n_test,jso_seed,tau,val_objective,huber_alpha,jso_evals,search
+24,test,Tuned Hybrid (JSO seed 3),8.03021374179265,19.514032581350506,-0.20572583638045527,22992,3,2,20.917352166287976,6.029582314628675e-05,192,JSO

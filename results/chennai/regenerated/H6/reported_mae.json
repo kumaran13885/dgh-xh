@@ -1,0 +1,12 @@
+{
+ "XGB": 7.293481826782227,
+ "Huber": 7.6967572178649295,
+ "Huber Graph": 9.122383414668214,
+ "CONTROL Shuffled-Bearing Graph": 9.042775791464097,
+ "Static-Graph Huber": 9.044151494387563,
+ "Hybrid": 7.795591527716413,
+ "Tuned Hybrid": 7.999757106971938,
+ "CONTROL Tuned Flat Hybrid": 7.764335389735692,
+ "CONTROL Tuned Static-Graph Hybrid": 7.782701084053524,
+ "CONTROL Tail-Weighted XGB": 7.83419625300672
+}

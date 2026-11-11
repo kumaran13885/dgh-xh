@@ -1,0 +1,19 @@
+# large outputs go to Zenodo, not git
+*.pkl
+*.joblib
+*.npy
+*.npz
+*.ubj
+*.parquet
+*.nc
+*.grib
+
+data/
+outputs/
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.cdsapirc
+.DS_Store

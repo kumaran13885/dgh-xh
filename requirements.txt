@@ -1,0 +1,18 @@
+# Versions used for the Chennai runs (Python 3.10.19).
+# The Kaggle runs used other versions; see the table in README.md.
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.2
+xgboost==3.2.0
+psutil
+joblib
+pyarrow
+matplotlib==3.10.8
+seaborn
+requests
+
+# only needed for scripts/download_era5.py
+cdsapi
+
+# to run the notebooks locally
+jupyterlab

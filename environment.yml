@@ -1,0 +1,19 @@
+name: dgh-xh
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy=2.2.6
+  - pandas=2.3.3
+  - scikit-learn=1.7.2
+  - psutil
+  - joblib
+  - pyarrow
+  - matplotlib=3.10.8
+  - seaborn
+  - requests
+  - jupyterlab
+  - pip
+  - pip:
+      - xgboost==3.2.0
+      - cdsapi

@@ -1,4 +1,4 @@
-import argparse, glob, json, os, sys
+import argparse, csv, glob, json, os, sys
 import numpy as np
 
 
@@ -229,13 +229,14 @@ def main():
             "diff_ci_hi", "p_boot", "p_holm", "p_bh", "n_blocks", "B",
             "block_source"]
     out = os.path.join(a.outdir, "block_bootstrap.csv")
-    with open(out, "w") as f:
-        f.write(",".join(cols) + "\n")
+    with open(out, "w", newline="") as f:
+        w = csv.writer(f, lineterminator="\n")
+        w.writerow(cols)
         for r in all_rows:
-            f.write(",".join(
-                ("" if r.get(c, "") == "" else
-                 (f"{r[c]:.10g}" if isinstance(r.get(c), float) else str(r[c])))
-                for c in cols) + "\n")
+            w.writerow([
+                "" if r.get(c, "") == "" else
+                (f"{r[c]:.10g}" if isinstance(r.get(c), float) else str(r[c]))
+                for c in cols])
     print(f"\nsaved {out}  ({len(all_rows)} rows)")
 
     sig = [r for r in comp if r.get("p_holm", 1) < 0.05]

@@ -115,9 +115,29 @@ seeds 42, 43 and 44.
 Run time is dominated by JSO. On Chennai, 192 fitness evaluations take about
 3.5 hours per horizon. The other datasets use 54 evaluations.
 
-The scripts run from the command line; `python scripts/<name>.py --help` lists
-their options. Most of them read the `H*/predictions.npz` files that the
-notebooks write; those files are in the Zenodo archive, not here.
+`scripts/regen_cell.py` is run as an extra cell at the end of
+`02_chennai_controls.ipynb`. It refits the Table 7 models once from their saved
+settings and writes the per-sample predictions in `results/chennai/regenerated/`.
+The other scripts run from the command line; `python scripts/<name>.py --help`
+lists their options.
+
+The Chennai statistics can be rerun from the saved predictions:
+
+```
+P=results/chennai/regenerated
+python scripts/block_bootstrap.py out_bs $P/H12/predictions.npz $P/H1/predictions.npz \
+    $P/H24/predictions.npz $P/H3/predictions.npz $P/H6/predictions.npz \
+    --ref XGB --ref "CONTROL Tuned Static-Graph Hybrid" \
+    --ref "CONTROL Tuned Flat Hybrid" --ref "CONTROL Shuffled-Bearing Graph"
+python scripts/exceedance_eval.py out_ex "$P/H*/predictions.npz"
+python scripts/conformal_uq.py out_cf "$P/H*/predictions.npz"
+python scripts/objective_tradeoff.py out_ot "$P/H*/predictions.npz"
+```
+
+The bootstrap draws from one random stream across horizons, so the file order
+matters; the order above reproduces `results/chennai/bootstrap/block_bootstrap.csv`
+exactly. Adding `--pcts 80,85,90,95,97.5,99,99.5` with only the first two `--ref`
+options gives `block_bootstrap_pcts.csv`.
 
 | Paper item | Where it comes from |
 |---|---|

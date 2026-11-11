@@ -1,8 +1,9 @@
 # Results
 
-One folder per dataset. The urban and temperature datasets have one subfolder per
-gate mode (`fixed`, `legacy`, `shuffled`); `fixed` is the gate used in the paper.
-The US West Coast folder has one subfolder per booster seed.
+One folder per dataset. The urban and temperature datasets and the Gulf of Mexico have
+one subfolder per gate mode (`fixed`, `legacy`, `shuffled`); `fixed` is the gate
+used in the paper. Beijing temperature and the Gulf of Mexico have one further
+subfolder per booster seed (`seed42` to `seed44`), and so does the US West Coast.
 
 Folder names here are tidied; the notebooks write to their own output folders
 (for example `OUT_DIR = "Timing_threads"` for what is now `chennai/deployment/`).
@@ -23,7 +24,7 @@ Common files:
 | `main/` | main run, `GATE_MODE = "fixed"` | Tables 4 to 6, Table 7 (untuned rows) |
 | `controls/` | tuned controls and tail-weighted XGBoost, merged from the Kaggle jobs | |
 | `regenerated/` | all ten Table 7 models refitted in one environment from their saved settings | Table 7 (tuned and tail-weighted rows) |
-| `bootstrap/` | day-level block bootstrap on the refitted predictions | Table 7, bootstrap tests |
+| `bootstrap/` | day-level block bootstrap on the refitted predictions (`_pcts`: seven tail percentiles; `_gate2`: wind gate against distance-only and permuted bearings at the tuned settings) | Table 7, bootstrap tests |
 | `exceedance/` | exceedance verification at the 90th, 95th and 99th percentiles | Exceedance warning head |
 | `conformal/` | split-conformal coverage | Prediction intervals |
 | `tradeoff/` | MAE against tail bias, re-ranking over the bias weight | Ablation and gate controls |

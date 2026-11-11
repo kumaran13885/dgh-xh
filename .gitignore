@@ -1,8 +1,7 @@
 # large outputs go to Zenodo, not git
 *.pkl
 *.joblib
-!**/*.npy
-!*.npz
+*.npy
 *.ubj
 *.parquet
 *.nc

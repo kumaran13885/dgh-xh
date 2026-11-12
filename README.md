@@ -121,6 +121,15 @@ settings and writes the per-sample predictions in `results/chennai/regenerated/`
 The other scripts run from the command line; `python scripts/<name>.py --help`
 lists their options.
 
+`scripts/gate_matched_cell.py` runs after it, in the same session. It refits the
+tuned hybrid with only the adjacency changed (distance-only, permuted bearings).
+Its bootstrap is `results/chennai/bootstrap/block_bootstrap_gate2.csv`:
+
+    python scripts/block_bootstrap.py out_bs_gate "results/chennai/gate_matched/H*/predictions.npz" \
+        --ref "Tuned Hybrid (shuffled bearings)" --ref "Tuned Hybrid (static adjacency, matched HP)"
+
+(On Linux, list the five files in the order H12, H1, H24, H3, H6, as for the main bootstrap.)
+
 The Chennai statistics can be rerun from the saved predictions:
 
 ```

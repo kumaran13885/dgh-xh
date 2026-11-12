@@ -121,7 +121,7 @@ settings and writes the per-sample predictions in `results/chennai/regenerated/`
 The other scripts run from the command line; `python scripts/<name>.py --help`
 lists their options.
 
-`scripts/gate_matched_cell.py` runs after it, in the same session. It refits the
+`scripts/gate_matched_cell.py` runs after regen_cell.py, in the same session. It refits the
 tuned hybrid with only the adjacency changed (distance-only, permuted bearings).
 Its bootstrap is `results/chennai/bootstrap/block_bootstrap_gate2.csv`:
 

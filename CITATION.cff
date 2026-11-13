@@ -1,9 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this code, please cite it as below."
-title: "DGH-XH: code and results for graph-adaptive regression with tail-aware residual correction"
+message: "If you use this code or the result tables, please cite the paper below."
+title: "Reproducibility package for \"A Graph-Adaptive Regression Architecture with Metaheuristic Optimization and Tail-Aware Residual Correction\""
 version: 1.0.0
+date-released: 2026-11-13
 license: MIT
-repository-code: "https://github.com/<account>/dgh-xh"
+repository-code: "https://github.com/kumaran13885/dgh-xh"
 authors:
   - family-names: Thirugnanasambandamoorthy
     given-names: Kumaran
@@ -11,4 +12,13 @@ authors:
   - family-names: Rangasamy
     given-names: Parthiban
     affiliation: "RVS College of Engineering and Technology, Coimbatore, India"
-
+preferred-citation:
+  type: article
+  title: "A Graph-Adaptive Regression Architecture with Metaheuristic Optimization and Tail-Aware Residual Correction"
+  authors:
+    - family-names: Thirugnanasambandamoorthy
+      given-names: Kumaran
+    - family-names: Rangasamy
+      given-names: Parthiban
+  journal: "Discover Computing"
+  notes: "Under review."

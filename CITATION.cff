@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this code or the result tables, please cite the paper below."
 title: "Reproducibility package for \"A Graph-Adaptive Regression Architecture with Metaheuristic Optimization and Tail-Aware Residual Correction\""
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-11-13
 license: MIT
 repository-code: "https://github.com/kumaran13885/dgh-xh"

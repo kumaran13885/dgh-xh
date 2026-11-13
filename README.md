@@ -181,7 +181,7 @@ The code is released under the MIT licence (see `LICENSE`). The result tables in
 ## Citation
 
 If you use this code, please cite the paper above. A `CITATION.cff` file is
-included, and the Zenodo DOI will be added once the archive is published.
+included.
 
 ## Contact
 

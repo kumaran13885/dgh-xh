@@ -25,9 +25,8 @@ scripts/        post-processing: statistics, intervals, exceedance, figures
 results/        CSV outputs behind the tables and figures (see results/README.md)
 ```
 
-Large files (fitted models, prediction arrays, windowed tensors) are not in this
-repository. They are archived on Zenodo together with a snapshot of this code:
-DOI [to be added].
+Fitted models and windowed tensors are not included because of their size.
+The Chennai test-set predictions used by the bootstrap are in `results/chennai/`.
 
 ## Setup
 

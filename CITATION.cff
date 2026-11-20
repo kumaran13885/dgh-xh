@@ -11,6 +11,7 @@ authors:
     affiliation: "RVS College of Engineering and Technology, Coimbatore, India"
   - family-names: Rangasamy
     given-names: Parthiban
+    email: rparthi@gmail.com
     affiliation: "RVS College of Engineering and Technology, Coimbatore, India"
 preferred-citation:
   type: article
@@ -20,6 +21,5 @@ preferred-citation:
       given-names: Kumaran
     - family-names: Rangasamy
       given-names: Parthiban
-      email: rparthi@gmail.com
   journal: "Discover Computing"
   notes: "Under review."
